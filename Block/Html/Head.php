@@ -42,16 +42,17 @@ class Cammino_Cacheavoid_Block_Html_Head extends Mage_Page_Block_Html_Head
             }
 
             // pega config do admin
-             $cache_avoid = Mage::getStoreConfig('dev/cache_avoid/assets');
-            // static and skin css
-            $html .= $this->_prepareStaticAndSkinElements('<link rel="stylesheet" type="text/css" href="%s?cache='.$cache_avoid.'"%s />'."\n",
+             $cacheAvoid = empty(Mage::getStoreConfig('dev/cache_avoid/assets_param')) ? '' : '?cache=' . Mage::getStoreConfig('dev/cache_avoid/assets_param') ;
+            
+              // static and skin css
+            $html .= $this->_prepareStaticAndSkinElements('<link rel="stylesheet" type="text/css" href="%s'.$cacheAvoid.'"%s />'."\n",
                 empty($items['js_css']) ? array() : $items['js_css'],
                 empty($items['skin_css']) ? array() : $items['skin_css'],
                 $shouldMergeCss ? array(Mage::getDesign(), 'getMergedCssUrl') : null
             );
 
             // static and skin javascripts
-            $html .= $this->_prepareStaticAndSkinElements('<script type="text/javascript" src="%s?cache='.$cache_avoid.'"%s></script>' . "\n",
+            $html .= $this->_prepareStaticAndSkinElements('<script type="text/javascript" src="%s'.$cacheAvoid.'"%s></script>' . "\n",
                 empty($items['js']) ? array() : $items['js'],
                 empty($items['skin_js']) ? array() : $items['skin_js'],
                 $shouldMergeJs ? array(Mage::getDesign(), 'getMergedJsUrl') : null
