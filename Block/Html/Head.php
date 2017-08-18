@@ -42,7 +42,8 @@ class Cammino_Cacheavoid_Block_Html_Head extends Mage_Page_Block_Html_Head
             }
 
             // pega config do admin
-             $cacheAvoid = empty(Mage::getStoreConfig('dev/cache_avoid/assets_param')) ? '' : '?cache=' . Mage::getStoreConfig('dev/cache_avoid/assets_param') ;
+            $cacheParam = Mage::getStoreConfig('dev/cache_avoid/assets_param');
+             $cacheAvoid = (empty($cacheParam)) ? '' : '?cache=' . $cacheParam;
             
               // static and skin css
             $html .= $this->_prepareStaticAndSkinElements('<link rel="stylesheet" type="text/css" href="%s'.$cacheAvoid.'"%s />'."\n",
