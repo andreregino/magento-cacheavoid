@@ -1,0 +1,26 @@
+<config>
+	<sections>
+		<dev>
+			<groups>
+				<cache_avoid translate="label">
+					<label>Controle de Cache</label>
+					<comment><![CDATA[]]></comment>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<assets_param translate="label">
+							<label>Parâmetro para Assets</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</assets_param>
+					</fields>
+				</cache_avoid>
+			</groups>
+		</dev>
+	</sections>
+</config>

@@ -1,0 +1,8 @@
+<config>
+	<modules>
+		<Cammino_Cacheavoid>
+			<active>true</active>
+			<codePool>community</codePool>
+		</Cammino_Cacheavoid>
+	</modules>
+</config>

@@ -1,0 +1,21 @@
+<config>
+	<modules>
+        <Cammino_Cacheavoid>
+            <version>0.0.1</version>
+        </Cammino_Cacheavoid>
+    </modules>
+	<global>
+		<helpers>
+			<camminocacheavoid>
+				<class>Cammino_Cacheavoid_Helper</class>
+			</camminocacheavoid>
+		</helpers>
+		<blocks>
+			<page>
+				<rewrite>
+					<html_head>Cammino_Cacheavoid_Block_Html_Head</html_head>
+				</rewrite>
+			</page>
+		</blocks>
+	</global>
+</config>
