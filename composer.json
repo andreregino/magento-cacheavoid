@@ -1,0 +1,10 @@
+{
+    "name":"cammino/cacheavoid",
+    "type":"magento-module",
+    "license":"OSL-3.0",
+    "homepage":"https://github.com/cammino/magento-cacheavoid",
+    "description":"Module that appends a query string in the end of the assets file calling in order to avoid browser cache.",
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
